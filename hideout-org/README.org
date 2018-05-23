@@ -7,8 +7,10 @@
 * Table of Contents                                        :TOC_4_gh:noexport:
 - [[#description][Description]]
   - [[#features][Features:]]
+  - [[#from-et2000org-gtd][From et2000/org-gtd]]
 - [[#install][Install]]
 - [[#key-bindings][Key bindings]]
+  - [[#from-et2000org-gtd-1][From et2000/org-gtd]]
 
 * Description
 This layer adds support for something.
@@ -18,6 +20,14 @@ This layer adds support for something.
   - Lint
   - Refactor
   - ...
+    
+** From et2000/org-gtd
+
+This spacemacs layer is based on the web document "[[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]]" by Bernt Hansen. AFAIK, his document is the most comprehensive tutorial you could find on the Internet. It is very helpful for those who want to learn org-mode for GTD.
+
+The original document is also included, though some settings here may be different from the documented version. I modified it a bit to make it fit in with the Spacemacs layer frame.
+
+*IMPORTANT* You'd better put this layer behind org layer, otherwise it will increase launch time significantly. I haven't figured out why. Any help will be appreciated.
 
 * Install
 To use this configuration layer, add it to your =~/.spacemacs=. You will need to
@@ -35,3 +45,39 @@ file.
 # [[https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org#sessions]]
 # [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
 # If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.
+
+** From et2000/org-gtd
+   
+| Key Binding | Description                                     | Used       |
+|-------------+-------------------------------------------------+------------|
+| F12         | Agenda (1 key less than C-c a)                  | Very Often |
+| C-c b       | Switch to org file                              | Very Often |
+| S-F11       | Goto currently clocked item                     | Very Often |
+| C-c c       | Capture a task                                  | Very Often |
+| C-F11       | Clock in a task (show menu with prefix)         | Often      |
+| f9 g        | Gnus - I check mail regularly                   | Often      |
+| f5          | Show todo items for this subtree                | Often      |
+| S-f5        | Widen                                           | Often      |
+| f9 b        | Quick access to bbdb data                       | Often      |
+| f9 c        | Calendar access                                 | Often      |
+| C-S-f12     | Save buffers and publish current project        | Often      |
+| C-c l       | Store a link for retrieval with C-c C-l         | Often      |
+| f8          | Go to next org file in org-agenda-files         | Sometimes  |
+| f9 r        | Boxquote selected region                        | Sometimes  |
+| f9 t        | Insert inactive timestamp                       | Sometimes  |
+| f9 v        | Toggle visible mode (for showing/editing links) | Sometimes  |
+| C-f9        | Previous buffer                                 | Sometimes  |
+| C-f10       | Next buffer                                     | Sometimes  |
+| C-x n r     | Narrow to region                                | Sometimes  |
+| f9 f        | Boxquote insert a file                          | Sometimes  |
+| f9 i        | Info manual                                     | Sometimes  |
+| f9 I        | Punch Clock In                                  | Sometimes  |
+| f9 O        | Punch Clock Out                                 | Sometimes  |
+| f9 o        | Switch to org scratch buffer                    | Sometimes  |
+| f9 s        | Switch to scratch buffer                        | Sometimes  |
+| f9 S        | Save all org buffers                            | Rare       |
+| f9 h        | Hide other tasks                                | Rare       |
+| f10         | Toggle line truncation/wrap                     | Rare       |
+| f9 T        | Toggle insert inactive timestamp                | Rare       |
+| C-c a       | Enter Agenda (minimal emacs testing)            | Rare       |
+
