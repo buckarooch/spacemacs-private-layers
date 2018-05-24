@@ -57,7 +57,7 @@ Each entry is either:
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
 ;;; From et2010/gtd-org
-(setq hideout-packages
+(setq hideout-org-packages
     '(
       org
       org-agenda
@@ -65,12 +65,12 @@ Each entry is either:
       ))
 
 ;; List of packages to exclude.
-(setq hideout-excluded-packages '())
+(setq hideout-org-excluded-packages '())
 
 (when (not (spacemacs/system-is-mswindows))
-  (push 'bbdb hideout-packages))
+  (push 'bbdb hideout-org-packages))
 
-(defun hideout/init-bbdb()
+(defun hideout-org/init-bbdb()
   (use-package bbdb
     :defer t
     :config
@@ -109,7 +109,7 @@ Each entry is either:
                              (t "NameOfCaller")))
           (insert caller))))))
 
-(defun hideout/init-boxquote()
+(defun hideout-org/init-boxquote()
   (use-package boxquote
     :defer t
     :init
@@ -118,7 +118,7 @@ Each entry is either:
       (define-key global-map (kbd "<f9> f") 'boxquote-insert-file))
     ))
 
-(defun hideout/post-init-org-agenda()
+(defun hideout-org/post-init-org-agenda()
   (require 'org-habit)
 
   (global-set-key (kbd "<f12>") 'org-agenda)
@@ -475,7 +475,7 @@ so change the default 'F' binding in the agenda to allow both"
   (setq org-agenda-text-search-extra-files (quote (agenda-archives)))
   )
 
-(defun hideout/pre-init-org ()
+(defun hideout-org/pre-init-org ()
   (spacemacs|use-package-add-hook org
     :post-config
     (progn
@@ -493,7 +493,7 @@ so change the default 'F' binding in the agenda to allow both"
           (org-clock-in '(16)))))
     ))
 
-(defun hideout/post-init-org ()
+(defun hideout-org/post-init-org ()
   (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
   (global-set-key "\C-cb" 'org-iswitchb)
 
@@ -1361,6 +1361,6 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
   ;; Variable org-show-entry-below is deprecated
   ;; (setq org-show-entry-below (quote ((default))))
   )
-  
+
 
 ;;; packages.el ends here
