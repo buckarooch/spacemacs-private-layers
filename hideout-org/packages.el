@@ -125,7 +125,10 @@ Each entry is either:
 
   (setq org-agenda-span 'day)
 
-  (setq org-agenda-files (quote ("~/xvar/xorg/gtd")))
+  ;; (setq org-agenda-files (quote ("~/xvar/xorg/gtd")))
+  (load-library "find-lisp")
+  (setq org-agenda-files
+    (find-lisp-find-files "~/xvar/xorg/gtd" "\.org$"))
 
   ;; Do not dim blocked tasks
   (setq org-agenda-dim-blocked-tasks nil)
